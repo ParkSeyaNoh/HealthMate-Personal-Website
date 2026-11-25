@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthMate | Predictive Public Health & Inventory System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Sticky Navigation Bar -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon"><img src="logo.png" alt="HealthMate Logo"></span> Health<span class="highlight">Mate</span>
+            </a>
+            <nav class="nav-links" id="nav-links">
+                <a href="#thesis-summary">Thesis Summary</a>
+                <a href="#core-features">Core Features</a>
+                <a href="#platforms">Platform Comparison</a>
+                <a href="#team">R&D Team</a>
+                <span class="thesis-pill">BSCS4 Thesis</span>
+            </nav>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="page-content">
+
+        <!-- 1. THESIS SUMMARY & HERO SECTION -->
+        <section class="section-compact hero-section" id="thesis-summary">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <div class="badge-row">
+                        <span class="badge">STI College Laoag</span>
+                        <span class="badge badge-accent">BSCS4 Undergraduate Thesis</span>
+                    </div>
+
+                    <!-- LOGO AND TITLE IN THE SAME ROW -->
+                    <div class="hero-title-row">
+                        <div class="hero-logo-space">
+                            <img src="logo.png" alt="HealthMate Official Logo" class="hero-app-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        </div>
+                        <h1>HealthMate: <span class="highlight">AI-Based Health Prediction and Medicine Recommendation System </span> for Barangay Health Offices</h1>
+                    </div>
+
+                    <div class="thesis-abstract-card">
+                        <div class="abstract-label">Thesis Abstract & Purpose</div>
+                        <p>
+                            HealthMate bridges municipal healthcare facilities and local citizens through a unified, data-driven ecosystem. 
+                            By synthesizing a <strong>native Android clinic administration app</strong>, a <strong>frictionless public web portal</strong>, 
+                            <strong>real-time Cloud Firestore stock synchronization</strong>, and <strong>XGBoost machine learning</strong> for outbreak forecasting, 
+                            the system resolves delayed epidemic detection and unexpected medicine shortages in community health centers.
+                        </p>
+                    </div>
+
+                    <div class="hero-actions">
+                        <a href="#core-features" class="btn btn-primary">See Core Features First ↓</a>
+                        <a href="#platforms" class="btn btn-secondary">Compare Web vs. Admin App</a>
+                    </div>
+
+                    <div class="quick-stats-strip">
+                        <div class="stat-item">
+                            <span class="stat-num">XGBoost</span>
+                            <span class="stat-label">Outbreak Modeling</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">Real-Time</span>
+                            <span class="stat-label">Inventory Sync</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">Dual-Platform</span>
+                            <span class="stat-label">Web Portal + Android</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">Role-Gated</span>
+                            <span class="stat-label">Firestore Security</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- APPLICATION SPECIFICATIONS CARD -->
+                <div class="hero-visual">
+                    <div class="app-specs-showcase-card">
+                        <div class="card-top-bar">
+                            <div class="dots"><span></span><span></span><span></span></div>
+                            <span class="card-bar-title">Application Technical Specifications</span>
+                            <span class="badge-subtle">Core Specs</span>
+                        </div>
+                        <div class="specs-card-body">
+                            <div class="spec-table-compact">
+                                <div class="spec-row-item">
+                                    <span class="sr-label">📱 Android Admin</span>
+                                    <span class="sr-val">Native Android (Java / Kotlin, API 24+)</span>
+                                </div>
+                                <div class="spec-row-item">
+                                    <span class="sr-label">🌐 Public Web Portal</span>
+                                    <span class="sr-val">HTML5, CSS3, JavaScript (Mobile-First)</span>
+                                </div>
+                                <div class="spec-row-item">
+                                    <span class="sr-label">☁️ Cloud Database</span>
+                                    <span class="sr-val">Cloud Firestore (Real-Time NoSQL & Offline Cache)</span>
+                                </div>
+                                <div class="spec-row-item">
+                                    <span class="sr-label">🔐 Authentication</span>
+                                    <span class="sr-val">Firebase Auth + Firestore <code>admins</code> RBAC</span>
+                                </div>
+                                <div class="spec-row-item">
+                                    <span class="sr-label">📈 Machine Learning</span>
+                                    <span class="sr-val">Python XGBoost Gradient Boosted Trees</span>
+                                </div>
+                            </div>
+
+                            <div class="specs-footer-note">
+                                <span class="note-icon">🛡️</span>
+                                <span>Multi-tier deployment ensuring high data privacy, sub-second sync, and offline resilience in municipal clinics.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. CORE FEATURES (DISPLAYED FIRST AFTER THESIS SUMMARY) -->
+        <section class="section-compact bg-light" id="core-features">
+            <div class="container">
+                <div class="compact-section-header">
+                    <span class="section-badge">Priority Architecture</span>
+                    <h2>Core Features of HealthMate</h2>
+                    <p>Directly addressing rural health unit bottlenecks through automated prediction, live tracking, and accessible interfaces.</p>
+                </div>
+
+                <div class="features-compact-grid">
+                    <div class="feature-compact-card">
+                        <div class="card-icon-title">
+                            <span class="feature-badge-icon">📊</span>
+                            <div>
+                                <span class="feature-tag">Predictive Analytics</span>
+                                <h3>XGBoost Disease Outbreak Forecasting</h3>
+                            </div>
+                        </div>
+                        <p>
+                            Analyzes historical patient case reports, symptomatic indicators, and seasonal epidemiological patterns with a Python XGBoost model to predict community disease surges up to two weeks in advance.
+                        </p>
+                    </div>
+
+                    <div class="feature-compact-card">
+                        <div class="card-icon-title">
+                            <span class="feature-badge-icon">💊</span>
+                            <div>
+                                <span class="feature-tag">Supply Intelligence</span>
+                                <h3>Real-Time Medicine Inventory Tracking</h3>
+                            </div>
+                        </div>
+                        <p>
+                            Maintains live batch tracking, stock counts, expiry thresholds, and consumption velocity across the clinic. Automatically alerts healthcare personnel prior to stock depletion so replenishment orders are placed on time.
+                        </p>
+                    </div>
+
+                    <div class="feature-compact-card">
+                        <div class="card-icon-title">
+                            <span class="feature-badge-icon">🔄</span>
+                            <div>
+                                <span class="feature-tag">Dual-Access Ecosystem</span>
+                                <h3>Two-Way Cloud Firestore Synchronization</h3>
+                            </div>
+                        </div>
+                        <p>
+                            Actions performed on the frontline Android admin app (such as dispensing medicine or logging consultations) instantly synchronize with Cloud Firestore to update public medicine availability indicators in real-time.
+                        </p>
+                    </div>
+
+                    <div class="feature-compact-card">
+                        <div class="card-icon-title">
+                            <span class="feature-badge-icon">🔐</span>
+                            <div>
+                                <span class="feature-tag">Security & Integrity</span>
+                                <h3>Role-Verified Firebase Access</h3>
+                            </div>
+                        </div>
+                        <p>
+                            Protects administrative controls and patient privacy. Secure verification through Firebase Authentication cross-referenced with the Firestore collection ensures only verified BHWs, nurses, and doctors can alter records.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. PLATFORM COMPARISON: WEB PAGE vs. ADMIN APP (DYNAMIC EXPLANATION & MOBILE SCREENSHOTS) -->
+        <section class="section-compact" id="platforms">
+            <div class="container">
+                <div class="compact-section-header">
+                    <span class="section-badge">Platform Explorer & Mobile Screenshots</span>
+                    <h2>Tailored System Experiences</h2>
+                    <p>Click below to switch between the <strong>Public Web Page</strong> and the <strong>Admin Mobile App</strong> to view their mobile screenshots (1 Main Interface + 2 Core Functions) and workflows.</p>
+                </div>
+
+                <!-- Interactive Switcher Buttons -->
+                <div class="platform-switch-bar">
+                    <button class="platform-switch-btn active" id="btn-web-app" data-platform="web">
+                        <span class="switch-icon">🌐</span>
+                        <span class="switch-text">
+                            <strong>Public Web Page</strong>
+                            <small>Citizen & Patient Portal</small>
+                        </span>
+                    </button>
+                    <button class="platform-switch-btn" id="btn-admin-app" data-platform="admin">
+                        <span class="switch-icon">📱</span>
+                        <span class="switch-text">
+                            <strong>Admin Mobile App</strong>
+                            <small>BHW & Clinic Staff Android</small>
+                        </span>
+                    </button>
+                </div>
+
+                <!-- DYNAMIC EXPLANATION CONTAINER -->
+                <div class="platform-display-card" id="platform-display">
+                    
+                    <!-- ==================== PANE 1: PUBLIC WEB PAGE ==================== -->
+                    <div class="platform-pane active" id="pane-web">
+                        
+                        <!-- Top Overview Grid -->
+                        <div class="pane-grid">
+                            <div class="pane-info">
+                                <div class="pane-tag public-tag">Public Community Facing</div>
+                                <h3>Citizen Public Health & Inventory Web Page</h3>
+                                <p class="pane-lead">
+                                    The <strong>HealthMate Web Page</strong> is a zero-friction, browser-accessible portal designed for community residents, outpatients, and families. Residents can immediately check medicine availability and advisories without traveling to the clinic.
+                                </p>
+
+                                <div class="role-target-box">
+                                    <span class="role-target-title">Target Users:</span>
+                                    <span class="role-chip">Barangay Residents</span>
+                                    <span class="role-chip">General Public</span>
+                                </div>
+
+                                <div class="explanation-details">
+                                    <h4>What Citizens Can Do on the Web Page:</h4>
+                                    <ul class="clean-bullet-list">
+                                        <li>
+                                            <strong>Check Live Medicine Stocks:</strong> Look up prescribed medications in real time to see if they are in stock at the local health unit before leaving home.
+                                        </li>
+                                        <li>
+                                            <strong>Read Community Outbreak Advisories:</strong> Access timely health warnings and preventive tips driven by the system's XGBoost prediction models.
+                                        </li>
+                                        <li>
+                                            <strong>Zero Installation Required:</strong> Read-only access optimized for any smartphone browser with minimal mobile data usage.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Right Column: QR Code Access Card -->
+                            <div class="pane-sidebar" id="web-qr">
+                                <div class="qr-access-card">
+                                    <div class="qr-header">
+                                        <span class="qr-badge">Instant Access</span>
+                                        <h4>Web App QR Code & Link</h4>
+                                        <p>Scan with your smartphone camera to open the public web portal instantly.</p>
+                                    </div>
+
+                                    <!-- QR Code Graphic Container -->
+                                    <div class="qr-code-box">
+                                        <div class="qr-code-frame">
+                                            <img src="qr.png" alt="HealthMate Public Web App QR Code" class="qr-img">
+                                        </div>
+                                        <div class="qr-scan-hint">Scan with smartphone camera</div>
+                                    </div>
+
+                                    <!-- Direct Link Input -->
+                                    <div class="direct-link-container">
+                                        <label for="web-app-url" class="link-label">Direct Web Portal URL:</label>
+                                        <div class="url-input-wrap">
+                                            <input type="text" id="web-app-url" value="https://healthmate-ai-plf5.onrender.com" readonly>
+                                            <button type="button" class="btn-copy-url" id="btn-copy-url" title="Copy URL">Copy</button>
+                                        </div>
+                                        <a href="https://healthmate-ai-plf5.onrender.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block">
+                                            Open Web Page in Browser ↗
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3 MOBILE SCREENSHOT SHOWCASE (1 MAIN INTERFACE + 2 CORE FUNCTIONS) -->
+                        <div class="screenshot-section-divider">
+                            <span class="ss-badge">Mobile Showcase</span>
+                            <h4>Web App Mobile Interface & Core Functions</h4>
+                            <p>Mobile smartphone view showing the 1 Main Interface and 2 primary citizen capabilities.</p>
+                        </div>
+
+                        <div class="mobile-trio-showcase-grid">
+                            
+                            <!-- Web Screen 1: MAIN INTERFACE -->
+                            <div class="mobile-showcase-card highlight-main">
+                                <div class="mobile-phone-frame">
+                                    <div class="phone-top-speaker">
+                                        <div class="phone-speaker-slit"></div>
+                                        <div class="phone-camera-lens"></div>
+                                    </div>
+                                    <div class="phone-screen-area">
+                                        <img src="webMI.jpeg" alt="Web App Main Interface Mobile Screenshot" class="mobile-screen-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                        <div class="phone-screen-placeholder web-screen-ph">
+                                            <div class="ph-mobile-status"><span>9:41</span><span>●● 5G</span></div>
+                                            <div class="ph-mobile-brand">HealthMate Web</div>
+                                            <div class="ph-wireframe-lines">
+                                                <div class="wf-hero-box"></div>
+                                                <div class="wf-card-box"></div>
+                                                <div class="wf-nav-bar"></div>
+                                            </div>
+                                            <small class="ph-drop-tag">assets/web-main-interface.png</small>
+                                        </div>
+                                    </div>
+                                    <div class="phone-bottom-chin"></div>
+                                </div>
+                                <div class="mobile-card-meta">
+                                    <span class="meta-tag-pill main-pill">Main Interface</span>
+                                    <h5>Citizen Mobile Portal Home</h5>
+                                    <p>The primary mobile entry interface where residents view live clinic status and navigation shortcuts.</p>
+                                </div>
+                            </div>
+
+                            <!-- Web Screen 2: CORE FUNCTION 1 -->
+                            <div class="mobile-showcase-card">
+                                <div class="mobile-phone-frame">
+                                    <div class="phone-top-speaker">
+                                        <div class="phone-speaker-slit"></div>
+                                        <div class="phone-camera-lens"></div>
+                                    </div>
+                                    <div class="phone-screen-area">
+                                        <img src="web1.jpeg" alt="Live Medicine Availability Search Mobile Screenshot" class="mobile-screen-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                        <div class="phone-screen-placeholder web-screen-ph">
+                                            <div class="ph-mobile-status"><span>9:41</span><span>●● 5G</span></div>
+                                            <div class="ph-mobile-brand">Medicine Search</div>
+                                            <div class="ph-wireframe-lines">
+                                                <div class="wf-search-input"></div>
+                                                <div class="wf-stock-list"><div></div><div></div><div></div></div>
+                                            </div>
+                                            <small class="ph-drop-tag">assets/web-function-1.png</small>
+                                        </div>
+                                    </div>
+                                    <div class="phone-bottom-chin"></div>
+                                </div>
+                                <div class="mobile-card-meta">
+                                    <span class="meta-tag-pill function-pill">Function 1</span>
+                                    <h5>Ai-Based Diagnosis</h5>
+                                    <p>Allows residents to receive AI-powered diagnostic assistance based on their symptoms.</p>
+                                </div>
+                            </div>
+
+                            <!-- Web Screen 3: CORE FUNCTION 2 -->
+                            <div class="mobile-showcase-card">
+                                <div class="mobile-phone-frame">
+                                    <div class="phone-top-speaker">
+                                        <div class="phone-speaker-slit"></div>
+                                        <div class="phone-camera-lens"></div>
+                                    </div>
+                                    <div class="phone-screen-area">
+                                        <img src="web2.jpeg" alt="Outbreak Health Advisories Mobile Screenshot" class="mobile-screen-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                        <div class="phone-screen-placeholder web-screen-ph">
+                                            <div class="ph-mobile-status"><span>9:41</span><span>●● 5G</span></div>
+                                            <div class="ph-mobile-brand">Health Advisories</div>
+                                            <div class="ph-wireframe-lines">
+                                                <div class="wf-alert-banner"></div>
+                                                <div class="wf-advisory-cards"><div></div><div></div></div>
+                                            </div>
+                                            <small class="ph-drop-tag">assets/web-function-2.png</small>
+                                        </div>
+                                    </div>
+                                    <div class="phone-bottom-chin"></div>
+                                </div>
+                                <div class="mobile-card-meta">
+                                    <span class="meta-tag-pill function-pill">Function 2</span>
+                                    <h5>Outbreak Advisories & Warnings</h5>
+                                    <p>Displays timely community health precautions based on real-time data.</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- ==================== PANE 2: ADMIN MOBILE APP ==================== -->
+                    <div class="platform-pane" id="pane-admin">
+                        
+                        <!-- Top Overview Grid -->
+                        <div class="pane-grid">
+                            <div class="pane-info">
+                                <div class="pane-tag admin-tag">Healthcare Personnel Only</div>
+                                <h3>Admin & BHW Android Mobile Application</h3>
+                                <p class="pane-lead">
+                                    The <strong>HealthMate Admin App</strong> is a secure native Android mobile command center built for municipal clinic operations, field consultations, and real-time inventory management.
+                                </p>
+
+                                <div class="role-target-box">
+                                    <span class="role-target-title">Target Users:</span>
+                                    <span class="role-chip">Municipal Doctors</span>
+                                    <span class="role-chip">Clinic Nurses</span>
+                                    <span class="role-chip">Barangay Health Workers (BHWs)</span>
+                                    <span class="role-chip">Inventory Custodians</span>
+                                </div>
+
+                                <div class="explanation-details">
+                                    <h4>What Health Personnel Do in the Admin App:</h4>
+                                    <ul class="clean-bullet-list">
+                                        <li>
+                                            <strong>Patient Consultation & Symptom Logging:</strong> Frontline workers log patient demographic data, symptoms, and diagnoses. This anonymized data directly feeds the Python XGBoost outbreak forecasting model.
+                                        </li>
+                                        <li>
+                                            <strong>Real-Time Stock Dispensation & Auditing:</strong> Deduct medicines upon dispensing with instant Cloud Firestore updates; log newly delivered supply batches and expiry dates.
+                                        </li>
+                                        <li>
+                                            <strong>Health Records Management:</strong> View past health trends and risk assessments and upload new medical information.
+                                        </li>
+                                        <li>
+                                            <strong>Multi-Tiered Role Verification:</strong> Authenticated accounts are verified against the Firestore collection to restrict administrative actions to authorized personnel only.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Right Column: Admin App Access & Security Guard -->
+                            <div class="pane-sidebar">
+                                <div class="admin-access-card">
+                                    <div class="spec-header">
+                                        <span class="spec-badge">Healthcare Staff Command</span>
+                                        <h4>Admin Access & Security</h4>
+                                        <p>Frontline staff credentials and role verification enforcement.</p>
+                                    </div>
+                                    <div class="admin-access-checklist">
+                                        <div class="access-check-item">
+                                            <span class="chk-icon">🔒</span>
+                                            <div>
+                                                <strong>Role Verification Guard</strong>
+                                                <p>Every login is verified against Firestore collection before unlocking controls.</p>
+                                            </div>
+                                        </div>
+                                        <div class="access-check-item">
+                                            <span class="chk-icon">📦</span>
+                                            <div>
+                                                <strong>APK Deployment</strong>
+                                                <p>Distributed directly to authorized municipal health center devices with encrypted local storage.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="admin-security-note">
+                                        <strong>Security Notice:</strong> The Admin APK is restricted to municipal health staff and requires credential authorization in the Firestore database to unlock administrative tabs.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3 MOBILE SCREENSHOT SHOWCASE (1 MAIN INTERFACE + 2 CORE FUNCTIONS) -->
+                        <div class="screenshot-section-divider">
+                            <span class="ss-badge">Mobile Showcase</span>
+                            <h4>Admin Mobile Interface & Core Functions</h4>
+                            <p>Native Android smartphone view showing the 1 Main Interface and 2 frontline healthcare capabilities.</p>
+                        </div>
+
+                        <div class="mobile-trio-showcase-grid">
+                            
+                            <!-- Admin Screen 1: MAIN INTERFACE -->
+                            <div class="mobile-showcase-card highlight-main">
+                                <div class="mobile-phone-frame">
+                                    <div class="phone-top-speaker">
+                                        <div class="phone-speaker-slit"></div>
+                                        <div class="phone-camera-lens"></div>
+                                    </div>
+                                    <div class="phone-screen-area">
+                                        <img src="adminMI.jpeg" alt="Admin App Main Interface Mobile Screenshot" class="mobile-screen-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                        <div class="phone-screen-placeholder admin-screen-ph">
+                                            <div class="ph-mobile-status"><span>08:30</span><span>⚡ Admin</span></div>
+                                            <div class="ph-mobile-brand">Admin Dashboard</div>
+                                            <div class="ph-wireframe-lines">
+                                                <div class="wf-admin-stats"><div></div><div></div></div>
+                                                <div class="wf-admin-menu"></div>
+                                                <div class="wf-nav-bar"></div>
+                                            </div>
+                                            <small class="ph-drop-tag">assets/admin-main-interface.png</small>
+                                        </div>
+                                    </div>
+                                    <div class="phone-bottom-chin"></div>
+                                </div>
+                                <div class="mobile-card-meta">
+                                    <span class="meta-tag-pill main-pill">Main Interface</span>
+                                    <h5>Admin Mobile Command Dashboard</h5>
+                                    <p>The core Android operational dashboard where healthcare staff monitor consultation queues and stock warnings.</p>
+                                </div>
+                            </div>
+
+                            <!-- Admin Screen 2: CORE FUNCTION 1 -->
+                            <div class="mobile-showcase-card">
+                                <div class="mobile-phone-frame">
+                                    <div class="phone-top-speaker">
+                                        <div class="phone-speaker-slit"></div>
+                                        <div class="phone-camera-lens"></div>
+                                    </div>
+                                    <div class="phone-screen-area">
+                                        <img src="admin1.jpeg" alt="Patient Consultation & Symptom Entry Mobile Screenshot" class="mobile-screen-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                        <div class="phone-screen-placeholder admin-screen-ph">
+                                            <div class="ph-mobile-status"><span>08:30</span><span>⚡ Admin</span></div>
+                                            <div class="ph-mobile-brand">Patient Intake</div>
+                                            <div class="ph-wireframe-lines">
+                                                <div class="wf-form-inputs"><div></div><div></div></div>
+                                                <div class="wf-submit-btn"></div>
+                                            </div>
+                                            <small class="ph-drop-tag">assets/admin-function-1.png</small>
+                                        </div>
+                                    </div>
+                                    <div class="phone-bottom-chin"></div>
+                                </div>
+                                <div class="mobile-card-meta">
+                                    <span class="meta-tag-pill function-pill">Function 1</span>
+                                    <h5>Patient Intake & Symptom Entry</h5>
+                                    <p>Standardized symptom entry by clinic workers that feeds clinical data directly into the XGBoost forecasting pipeline.</p>
+                                </div>
+                            </div>
+
+                            <!-- Admin Screen 3: CORE FUNCTION 2 -->
+                            <div class="mobile-showcase-card">
+                                <div class="mobile-phone-frame">
+                                    <div class="phone-top-speaker">
+                                        <div class="phone-speaker-slit"></div>
+                                        <div class="phone-camera-lens"></div>
+                                    </div>
+                                    <div class="phone-screen-area">
+                                        <img src="admin2.jpeg" alt="Medicine Stock Dispensing Mobile Screenshot" class="mobile-screen-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                        <div class="phone-screen-placeholder admin-screen-ph">
+                                            <div class="ph-mobile-status"><span>08:30</span><span>⚡ Admin</span></div>
+                                            <div class="ph-mobile-brand">Stock Dispensing</div>
+                                            <div class="ph-wireframe-lines">
+                                                <div class="wf-batch-barcode"></div>
+                                                <div class="wf-stock-adjust"><div></div><div></div></div>
+                                            </div>
+                                            <small class="ph-drop-tag">assets/admin-function-2.png</small>
+                                        </div>
+                                    </div>
+                                    <div class="phone-bottom-chin"></div>
+                                </div>
+                                <div class="mobile-card-meta">
+                                    <span class="meta-tag-pill function-pill">Function 2</span>
+                                    <h5>Medicine Dispensing & Audits</h5>
+                                    <p>Instant Firestore stock deduction upon dispensing, batch expiry tracking, and restock notification triggers.</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. RESEARCH & DEVELOPMENT TEAM (BEFORE FOOTER) -->
+        <section class="section-compact" id="team">
+            <div class="container">
+                <div class="compact-section-header">
+                    <span class="section-badge">Thesis Proponents</span>
+                    <h2>Research & Development Team</h2>
+                    <p>The BSCS4 undergraduate proponents from STI College Laoag behind the HealthMate ecosystem.</p>
+                </div>
+
+                <div class="team-compact-grid">
+                    
+                    <!-- Member 1: Lead Programmer -->
+                    <div class="team-card">
+                        <div class="team-avatar-box">
+                            <img src="adrian.jpeg" alt="Lead Programmer" class="team-avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="team-avatar-ph lead-ph">
+                                <span>LP</span>
+                            </div>
+                        </div>
+                        <div class="team-card-content">
+                            <span class="team-role-pill role-lead">Karl Adrian Lista</span>
+                            <h4>Lead Programmer</h4>
+                            <span class="team-affiliation">BSCS4 • System Architect</span>
+                        </div>
+                    </div>
+
+                    <!-- Member 2: Backend Programmer -->
+                    <div class="team-card">
+                        <div class="team-avatar-box">
+                            <img src="sean.jpeg" alt="Backend Programmer" class="team-avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="team-avatar-ph backend-ph">
+                                <span>BP</span>
+                            </div>
+                        </div>
+                        <div class="team-card-content">
+                            <span class="team-role-pill role-backend">Rienald Sean Vicente</span>
+                            <h4>Backend Programmer</h4>
+                            <span class="team-affiliation">BSCS4 • Backend Specialist</span>
+                        </div>
+                    </div>
+
+                    <!-- Member 3: Documentation -->
+                    <div class="team-card">
+                        <div class="team-avatar-box">
+                            <img src="louise.jpeg" alt="Documentation Specialist" class="team-avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="team-avatar-ph docs-ph">
+                                <span>DC</span>
+                            </div>
+                        </div>
+                        <div class="team-card-content">
+                            <span class="team-role-pill role-docs">Jamaikah Louise Quelnat</span>
+                            <h4>Technical Documentation</h4>
+                            <span class="team-affiliation">BSCS4 • Technical Writer</span>
+                        </div>
+                    </div>
+
+                    <!-- Member 4: Field Tester -->
+                    <div class="team-card">
+                        <div class="team-avatar-box">
+                            <img src="rich.jpeg" alt="Field Tester & QA" class="team-avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="team-avatar-ph tester-ph">
+                                <span>FT</span>
+                            </div>
+                        </div>
+                        <div class="team-card-content">
+                            <span class="team-role-pill role-tester">Rich Janssen Valdez</span>
+                            <h4>Field Tester & QA</h4>
+                            <span class="team-affiliation">BSCS4 • Quality Assurance</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 5. COMPACT FOOTER / THESIS METADATA -->
+    <footer class="footer-compact">
+        <div class="container footer-compact-container">
+            <div class="footer-brand">
+                <a href="#" class="logo footer-logo">
+                    <span class="logo-icon"><img src="logo.png" alt="HealthMate Logo"></span> Health<span class="highlight">Mate</span>
+                </a>
+                <p class="footer-thesis-text">
+                    Undergraduate Thesis by <strong>BSCS4 Students</strong> • <strong>STI College Laoag</strong>
+                </p>
+                <p class="footer-subtext">Predictive Public Health & Inventory Management System (A.Y. 2026–2027)</p>
+            </div>
+
+            <div class="footer-links-group">
+                <a href="#thesis-summary">Thesis Summary</a>
+                <a href="#core-features">Core Features</a>
+                <a href="#platforms">Web vs. Admin App</a>
+                <a href="#team">R&D Team</a>
+                <a href="#navbar" class="back-to-top-link">Back to Top ↑</a>
+            </div>
+        </div>
+        <div class="footer-bottom-bar">
+            <div class="container footer-bottom-inner">
+                <span>&copy; 2026 HealthMate Thesis Project. STI College Laoag. All rights reserved.</span>
+                <span>STI College Laoag • Bachelor of Science in Computer Science</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
